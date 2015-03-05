@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="base64Converter">
+<head>
+	<meta charset="UTF-8">
+	<title>Base64 Converter</title>
+	<link rel="stylesheet" href="./css/bootstrap.css">
+	<link rel="stylesheet" href="./css/my.css">
+</head>
+<body>
+	<h2 class="title">Base64 Converter</h1>
+	<div class="container-fluid" ng-controller="base64Controller">
+		<div class="row">
+			<textarea cols="40" rows="10" type="text" ng-model="data.input" placeholder="Paste Input Here"></textarea>
+		</div>
+		<div class="row">
+			<div class="col-xs-offset-3">
+				<input class="btn btn-primary" type="button" value="Decode" ng-click="decoder(data.input)">
+				<input class="btn btn-default" type="button" value="Encode" ng-click="encoder(data.input)">
+			</div>
+		</div>
+		<div class="row">
+			<textarea cols="40" rows="10" placeholder="Output Will Appear Here" ng-model="data.output"></textarea>
+		</div>
+	</div>
+</body>
+<script src="./js/angular.min.js"></script>
+<script src="./js/angular-utf8-base64.min.js"></script>	
+<script src="./js/base64converter.min.js"></script>
+</html>
